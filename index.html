@@ -1,0 +1,40 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Bungee+Hairline|Codystar|Lemon|Monoton|Sarina" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <style>
+    body {
+      margin: 100px auto;
+      background-color: #333333;
+    }
+    .title {
+      /*font-family: 'Press Start 2P', cursive;*/
+      font-family: 'Codystar', cursive;
+      /*font-family: 'Sarina', cursive;
+      font-family: 'Bungee Hairline', cursive;
+      font-family: 'Lemon', cursive;
+      font-family: 'Monoton', cursive;*/
+      font-size: 80px;
+      text-align: center;
+      margin: 0;
+      line-height: 4px;
+      color: yellow;
+    }
+  </style>
+  <script>
+    var rightPad = 4;
+    var opacity = .8;
+    var interval = setInterval(() => {
+      $('#title').append('<p class="title" style="opacity: ' + opacity + ';margin-right: ' + rightPad + 'px">Whackathon</p>');
+      opacity = opacity * 0.8;
+      rightPad = rightPad + 4;
+      if (opacity.toFixed(2) == 0) {
+        clearInterval(interval);
+      }
+    }, 100);
+
+  </script>
+</head>
+
+<body>
+  <p id="title" class="title">Whackathon</p>
+</body>
